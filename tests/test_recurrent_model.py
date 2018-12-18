@@ -1,11 +1,11 @@
 from recurrentshop import RecurrentModel
 from keras.layers import Input, Dense, add, Activation
 from keras.models import Model
-from keras.utils.test_utils import keras_test
+
 import numpy as np
 
 
-@keras_test
+
 def test_model():
     x = Input((5,))
     h_tm1 = Input((10,))
@@ -22,7 +22,7 @@ def test_model():
     model.predict(np.zeros((32, 7, 5)))
 
 
-@keras_test
+
 def test_state_initializer():
     x = Input((5,))
     h_tm1 = Input((10,))
@@ -39,7 +39,7 @@ def test_state_initializer():
     model.predict(np.zeros((32, 7, 5)))
 
 
-@keras_test
+
 def test_unroll():
     x = Input((5,))
     h_tm1 = Input((10,))
@@ -56,7 +56,7 @@ def test_unroll():
     model.predict(np.zeros((32, 7, 5)))
 
 
-@keras_test
+
 def test_decode():
     x = Input((5,))
     h_tm1 = Input((10,))
@@ -73,7 +73,7 @@ def test_decode():
     model.predict(np.zeros((32, 5)))
 
 
-@keras_test
+
 def test_readout():
     x = Input((5,))
     y_tm1 = Input((5,))
